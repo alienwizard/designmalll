@@ -55,9 +55,9 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 						<div class="center-field col-md-4"><div class="searchbar"><?php get_search_form(); ?></div></div>
 						<div class="right-field col-md-4">
 							<div class="contact">
-								<h4><i class="fa fa-envelope-o"></i><a href="mailto:info@email.se">info@email.se</a></h4>
-								<h4><i class="fa fa-phone-square"></i>018 - 155 455</h4>
-								<h4><i class="fa fa-clock-o"></i>08.00 - 17.00</h4>
+								<h4><i class="fa fa-envelope-o"></i><a href="mailto:<?php the_field('epost',4); ?>"><?php the_field('epost',4); ?></a></h4>
+								<h4><i class="fa fa-phone-square"></i><?php the_field('telefon',4);?></h4>
+								<h4><i class="fa fa-clock-o"></i><?php the_field('oppettid',4);?></h4>
 							</div>
 						</div>
 					</div>

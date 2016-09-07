@@ -19,7 +19,7 @@
 	} );
 
 	//Update site background color...
-	wp.customize( 'header_backgroundColor', function( value ) {
+	wp.customize( 'nav_backgroundColor', function( value ) {
 		console.log('called');
 		value.bind( function( newval ) {
 			$('.bottom-header').css('background-color', newval );
@@ -44,10 +44,36 @@
 
 
 			//Update site background color...
-	wp.customize( 'backgroundColor', function( value ) {
+	wp.customize( 'header_backgroundColor', function( value ) {
 		console.log('called');
 		value.bind( function( newval ) {
 			$('.top-header').css('background-color', newval );
+		} );
+	} );
+
+
+				//Update site background color...
+	wp.customize( 'footer_backgroundColor', function( value ) {
+		console.log('called');
+		value.bind( function( newval ) {
+			$('footer').css('background-color', newval );
+		} );
+	} );
+
+
+				//Update site background color...
+	wp.customize( 'footer_textColor', function( value ) {
+		console.log('called');
+		value.bind( function( newval ) {
+			$('footer').css('color', newval );
+		} );
+	} );
+
+				//Update site background color...
+	wp.customize( 'bot_footer_backgroundColor', function( value ) {
+		console.log('called');
+		value.bind( function( newval ) {
+			$('.footer-bottom').css('background-color', newval );
 		} );
 	} );
 	
