@@ -13,10 +13,10 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'design2');
+define('DB_NAME', 'design');
 
 /** MySQL database username */
-define('DB_USER', '250e4e73955f');
+define('DB_USER', 'mallmannen');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'steel1992');
@@ -24,8 +24,8 @@ define('DB_PASSWORD', 'steel1992');
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 
-define('WP_SITEURL', 'http://design2.mediahelpcrm.se');
-define('WP_HOME', 'http://design2.mediahelpcrm.se');
+define('WP_SITEURL', 'http://design.mediahelpcrm.se');
+define('WP_HOME', 'http://design.mediahelpcrm.se');
 
 /**#@+
  * Authentication Unique Keys and Salts.
