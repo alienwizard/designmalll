@@ -386,7 +386,7 @@ $(document).ready(function(){
 
     <section class="banner">
     	<div class="container">
-    		<div class="cntctimg" style="width:100%;">	<iframe style="width:100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8528.230167152198!2d11.8591365!3d57.6984922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5e58ab24729ce07b!2sElfcon+Containerservice+AB!5e0!3m2!1sen!2sse!4v1464964542454" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    		<div class="cntctimg" style="width:100%;"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d32053.86147906547!2d17.694372!3d59.859663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x691af148fefd86d8!2sMediahelp+Sverige+AB!5e0!3m2!1ssv!2sse!4v1474467126951" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
     	</div>
     </section>
 	
@@ -396,7 +396,7 @@ $(document).ready(function(){
 	    		<div class="col-sm-7">
 	    			<h2 class="sub_header"><?php the_title();?></h2>
 	    			<div>
-	    				<?php echo do_shortcode('[contact-form-7 id="54" title="contact us"]'); ?>
+	    				<?php echo do_shortcode('[contact-form-7 id="84" title="kontaktformulär-kontaktsida"]'); ?>
 	    			</div>
 	    		</div>
 	    		<div class="col-sm-5">

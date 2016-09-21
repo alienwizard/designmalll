@@ -27,6 +27,9 @@ img {max-width: 100%;}
 .header {
 	position: relative;
 }
+.header img{
+	padding: 10px 0px;
+}
 .header .navbar-brand {margin-left: -15px;}
 .logo {
 	float:left;
@@ -73,6 +76,10 @@ img {max-width: 100%;}
 .banner {
 	text-align: center;
 	margin-top: 4px;
+}
+
+.banner iframe{
+	width: 100%;
 }
 /*social*/
 .social {margin: 15px 0;}
@@ -311,7 +318,7 @@ textarea.form_fill_cell{
 @media(min-width: 768px) {
 	.navbar-nav > li + li:before {
 		content: "";
-		background: #f1c266;
+		background: #ffffff;
 		width: 1px;
 		top: 20%;
 		bottom: 20%;

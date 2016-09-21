@@ -12,7 +12,7 @@ get_header(); ?>
  <section class="banner">
     	<div class="container">
     		<div class="mainSlider">
-    			<?php query_posts( 'cat=3&showposts=-1' );?>
+    			<?php query_posts( 'cat=4&showposts=-1' );?>
     			<?php while ( have_posts() ) : the_post(); ?>
     			<div class="item">
     			<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>           						
@@ -33,9 +33,9 @@ get_header(); ?>
 				<?php endwhile;?>
 				<?php wp_reset_postdata(); ?>
 	    		</div>
-	    		<?php $event_query = new WP_Query(array('post_type' => 'page','post_parent'  => 39, 'posts_per_page' => '-1','order'=> 'DESC')); 
+	    		<?php $event_query = new WP_Query(array('post_type' => 'page','post_parent'  => 6, 'posts_per_page' => '-1','order'=> 'DESC')); 
                   while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-	    		<div class="col-sm-3">
+	    		<div class="col-sm-4 col-md-4">
 	    			<div class="imgWrapOuter">
 		    			<div class="imgWrap"><?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>           						
     				<img src="<?php echo $image[0]; ?>" alt="" /></div>

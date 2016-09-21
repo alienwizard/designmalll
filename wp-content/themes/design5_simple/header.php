@@ -98,15 +98,6 @@
 	          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav', 'menu_id' => 'primary-menu' ) ); ?>
 	        </div><!--/.nav-collapse -->
 	        
-	        <div class="countrySelect">
-	        	<input id="country_selector" type="text">
-				<label for="country_selector" style="display:none;">Select a country here...</label>
-				<?php// echo do_shortcode('[google-translator]'); ?>
-	        </div>
-				<div class="countrySelect">
-	        <?php //echo do_shortcode('[google-translator]'); ?>
-	          </div> 
-	        
 	      </div>
 	    </div>
     </header>
