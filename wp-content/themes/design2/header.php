@@ -116,7 +116,11 @@
 	                <span class="icon-bar"></span>
 	              </button>
 	              <!--logo part start-->
-	              <h1><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a></h1>
+	              <h1>						<?php 
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+ ?>
+	<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $image[0]; ?>"></a></h1>
 	              <!--logo part end-->
 	            </div>
 	           	<!-- nav part start-->

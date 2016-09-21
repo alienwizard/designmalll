@@ -22,7 +22,7 @@ get_header(); ?>
 		<div id="demo" class="slider_outr">
 	        <div id="owl-demo">
 	        	<?php
-		  			query_posts( 'cat=2&order=DESC&showposts=20' );
+		  			query_posts( 'cat=4&order=DESC&showposts=20' );
 					while (have_posts()) : the_post();
 		  		?>
 	            <div class="item">

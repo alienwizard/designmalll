@@ -77,7 +77,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	</div>
 
 
-<section class="banner" style="background-image: url('<?php the_field('sidbild'); ?>')">
+<section class="banner" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
 <div class="overlay"></div>
 <div class="container">
 	<div class="header-logo">
