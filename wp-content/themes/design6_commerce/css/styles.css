@@ -9,12 +9,14 @@ body header {
   top: 0px;
   left: 0px;
   right: 0px;
+  transition: 1s ease all;
 }
 
 body header ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
+  width: 70%;
 }
 
 body header ul #logo img {

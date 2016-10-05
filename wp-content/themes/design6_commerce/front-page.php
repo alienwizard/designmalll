@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<section class="banner">
+		<h1>Vi säljer det du behöver</h1>
+</section>
+
 
 <div class="container">
 

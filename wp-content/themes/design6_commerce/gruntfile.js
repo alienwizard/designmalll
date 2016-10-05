@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			},
 			dev: {
 				options: {
-					beutify: true,
+					beutify: false,
 					mangle: false,
 					compress: false,
 					preserveComments: true
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			js: {
-				files: ['src/js/*.js'],
+				files: ['src/**/*.js'],
 				tasks: ['uglify:dev'],
 				livereload : true
 			},
@@ -81,6 +81,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-browserify');
 
 
 	//Register tastks

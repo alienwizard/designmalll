@@ -6,118 +6,72 @@
 get_header();
 
 
-$order = null;
-$eid = '0';
-$sharedSecret = 'sharedSecret';
-$connector = Klarna_Checkout_Connector::create(
-    $sharedSecret,
-    Klarna_Checkout_Connector::BASE_TEST_URL
-);
 
 
 
-$cart = array(
-    array(
-        'reference' => '123456789',
-        'name' => 'Klarna t-shirt',
-        'quantity' => 2,
-        'unit_price' => 12300,
-        'discount_rate' => 1000,
-        'tax_rate' => 2500
-    ),
-    array(
-        'type' => 'shipping_fee',
-        'reference' => 'SHIPPING',
-        'name' => 'Shipping Fee',
-        'quantity' => 1,
-        'unit_price' => 4900,
-        'tax_rate' => 2500
-    )
-);
+?>
+
+<script type="text/javascript">
+    $(function() {
+  var $form = $('#payment-form');
+  $form.submit(function(event) {
+    // Disable the submit button to prevent repeated clicks:
+    $form.find('.submit').prop('disabled', true);
+
+    // Request a token from Stripe:
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from being submitted:
+    return false;
+  });
+});
+
+    function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+
+  if (response.error) { // Problem!
+
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
+
+</script>
+
+<?php 
 
 
-if (array_key_exists('klarna_order_id', $_SESSION)) {
-    // Resume session
-    $order = new Klarna_Checkout_Order(
-        $connector,
-        $_SESSION['klarna_order_id']
-    );
-    try {
-        $order->fetch();
-        // Reset cart
-        $update['cart']['items'] = array();
-        foreach ($cart as $item) {
-            $update['cart']['items'][] = $item;
-        }
-        $order->update($update);
-    } catch (Exception $e) {
-        // Reset session
-        $order = null;
-        unset($_SESSION['klarna_order_id']);
-    }
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+\Stripe\Stripe::setApiKey("sk_test_vPH0EJJWgeUVZBimdw90sXMP");
+
+// Get the credit card details submitted by the form
+$token = $_POST['stripeToken'];
+
+// Create a charge: this will charge the user's card
+try {
+  $charge = \Stripe\Charge::create(array(
+    "amount" => 1000, // Amount in cents
+    "currency" => "sek",
+    "source" => $token,
+    "description" => "Example charge"
+    ));
+} catch(\Stripe\Error\Card $e) {
+  // The card has been declined
 }
-
-
-//IF NEW ORDER
-
-if ($order == null) {
-
-	// Start new session
-    $create['purchase_country'] = 'SE';
-    $create['purchase_currency'] = 'SEK';
-    $create['locale'] = 'sv-se';
-    $create['merchant'] = array(
-        'id' => $eid,
-        'terms_uri' => 'http://example.com/terms.html',
-        'checkout_uri' => 'http://localhost:8080/design/checkout/',
-        'confirmation_uri' => 'http://localhost:8080/design/tack-for-ditt-kop/' .
-            '?klarna_order_id={checkout.order.id}',
-        // You can not receive push notification on non publicly available URI
-        'push_uri' => 'http://localhost:8080/design/push/' .
-            '?klarna_order_id={checkout.order.id}'
-    );
-
-    $update['cart']['items'] = array();
-
-    foreach ($cart as $item) {
-        $create['cart']['items'][] = $item;
-    }
-
-    $order = new Klarna_Checkout_Order($connector);
-
-
-    try {
-        $order->create($create);
-        $order->fetch();
-    } catch (Klarna_Checkout_ApiErrorException $e) {
-        var_dump($e->getMessage());
-        var_dump($e->getPayload());
-        die;
-    }
-
-
-
-}
-
-
-// Store location of checkout session
-$_SESSION['klarna_order_id'] = $sessionID = $order['id'];
-
-
-print_r($order['gui']['snippet']);
-
-
-if (isset($order['gui']['snippet'])) {
-    // Display checkout
-    $snippet = $order['gui']['snippet'];
-    // DESKTOP: Width of containing block shall be at least 750px
-    // MOBILE: Width of containing block shall be 100% of browser window (No
-    // padding or margin)
-    echo "<div>{$snippet}</div>";
-}
-
-
-
 
 
 
