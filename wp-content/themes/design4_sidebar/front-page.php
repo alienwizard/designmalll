@@ -2,8 +2,9 @@
 get_header();
 ?>
 <article>
-<div class="container">
 <div class="row">
+<div class="container">
+
 <div class="col-md-3 col-sm-3" id="sidopanel">
 	<div class="logga">
 		<?php the_custom_logo(); ?>
