@@ -9,13 +9,20 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/bower_components/parallax.js/parallax.min.js"></script>
 	<?php wp_head();?>
 </head>
+<div class="aside-wrap">
+	<?php wp_nav_menu($args = arraY('menu' => 'aside_nav')); ?>
+</div>
+<div class="page-wrapper">
+
 <header class="top-header">
 
 <div class="flex-wrap">
 <div id="logo"><img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/09/mh-white-small.png"></div>
 <?php wp_nav_menu( $args = array('menu' => 'main_nav') ); ?>
+<div class="bars"><span></span></div>
 </div>
 </header>
+
 <body>
 	<script type="text/javascript">
 

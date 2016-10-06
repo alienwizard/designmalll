@@ -2,11 +2,16 @@ body, html {
   height: 100%;
 }
 
+.asideVisible {
+  overflow: hidden;
+}
+
 .parallax-mirror {
   z-index: 1;
 }
 
 body {
+  margin: 0px;
   height: 100%;
   /* GENERELLA REGLER **/
   /*HEADER END*/
@@ -16,37 +21,150 @@ body img {
   max-width: 100%;
 }
 
+body .page-wrapper {
+  -webkit-transition: -webkit-transform 350ms 50ms,width 350ms 0s;
+  transition: transform 350ms 50ms,width 350ms 0s;
+}
+
+body .page-wrapper.open {
+  transform: translate3d(-350px, 0, 0);
+}
+
+body .aside-wrap {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  right: -350px;
+  width: 350px;
+  color: #80A0B5;
+  background-color: red;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 350ms 50ms,width 350ms 0s;
+  transition: transform 350ms 50ms,width 350ms 0s;
+}
+
+body .aside-wrap.open {
+  transform: translate3d(-350px, 0, 0);
+}
+
 body header {
-  background-color: #0074c8;
   position: fixed;
   top: 0px;
   top: 0px;
   left: 0px;
   right: 0px;
-  z-index: 999;
+  z-index: 9999999;
   transition: 1s ease all;
 }
 
 body header .flex-wrap {
-  width: 70%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
+}
+
+body header .flex-wrap #logo {
+  padding-left: 80px;
+  transition: 1s ease all;
+}
+
+body header .flex-wrap #logo img {
+  max-width: 300px;
+  height: auto;
+  transition: 1s ease all;
+}
+
+body header .flex-wrap .bars {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  align-self: flex-end;
+  transition: 1s ease all;
+}
+
+body header .flex-wrap .bars span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  top: 0;
+  right: 0;
+  background-color: white;
+  -webkit-transition: background .3s,-webkit-transform .3s,top .3s;
+  transition: background .3s,transform .3s,top .3s;
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+body header .flex-wrap .bars span:after {
+  content: "";
+  height: 2px;
+  width: 40px;
+  position: absolute;
+  color: white;
+  background-color: white;
+  top: 4px;
+  right: 0;
+  -webkit-transition: background .3s,-webkit-transform .3s,top .3s;
+  transition: background .3s,transform .3s,top .3s;
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+body header .flex-wrap .bars span:before {
+  content: "";
+  height: 2px;
+  width: 40px;
+  position: absolute;
+  color: white;
+  background-color: white;
+  top: 8px;
+  right: 0;
+  -webkit-transition: background .3s,-webkit-transform .3s,top .3s;
+  transition: background .3s,transform .3s,top .3s;
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+body header .flex-wrap .bars.open {
+  z-index: 9999;
+}
+
+body header .flex-wrap .bars.open span {
+  background: 0,0;
+}
+
+body header .flex-wrap .bars.open span:after {
+  top: 0px;
+  transform: rotate(45deg);
+}
+
+body header .flex-wrap .bars.open span:before {
+  top: 0px;
+  transform: rotate(-45deg);
 }
 
 body header ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  width: 100%;
 }
 
-body header ul #logo img {
-  max-width: 300px;
+body header ul li {
   transition: 1s ease all;
 }
 
 body header ul li a {
   color: white;
+  text-decoration: none;
+  transition: 1s ease all;
+}
+
+body header ul li a:hover {
+  text-decoration: underline;
 }
 
 body header nav {
@@ -83,7 +201,7 @@ body .parallax-window .para-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 90vh;
   background-size: cover;
   left: -10px;
   right: -10px;
@@ -92,4 +210,16 @@ body .parallax-window .para-image {
 .parallax-container {
   height: 500px;
   width: 100%;
+}
+
+/*Process styles*/
+#process {
+  width: 100%;
+  margin-top: 10vh;
+}
+
+#process .l-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }

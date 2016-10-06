@@ -6,6 +6,7 @@ if(function_exists('register_nav_menus')){
 	register_nav_menus(
 		array(
 			'main_nav' => 'Main Navigation Menu',
+            'aside_nav' => 'Aside meny',
 			'footer_nav' => 'Main Footer Menu'
 			)
 	);

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="main-wrapper">
+
 <section class="banner" >
 <div class="parallax-window" data-parallax="scroll" ">
 
@@ -9,6 +11,29 @@
 </div>
 
 
+</section>
+
+<section id="process">
+	<div class="l-container">
+		<div class="steps" id="step1">
+			<div class="icon"><img src="<?php bloginfo('template_url')?>/img/zoom_icon.png"></div>
+			<p>Lorem ipusm</p>
+		</div>
+
+		<div class="staps" id="step2">		<div class="icon"><img src="<?php bloginfo('template_url')?>/img/hand_pic.png"></div>
+		<div class="info">
+		<p>Lorem ipusm</p>
+		</div></div>
+
+
+		<div class="steps" id="step3">
+					<div class="icon"><img src="<?php bloginfo('template_url')?>/img/computer.png"></div>
+		<div class="info">
+			<p>Lorem ipusm</p>
+		</div>
+		</div>
+
+	</div>
 </section>
 
 
@@ -44,6 +69,8 @@
 </div>
 
 	
+
+</div>
 
 </div>
 
