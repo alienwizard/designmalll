@@ -2,12 +2,16 @@
 get_header();
 ?>
 <article class="site-content" style="background-image:url('http://localhost:8080/design/wp-content/uploads/2016/09/AdobeStock_40515377.jpeg');">
-<div class="col-md-9 col-sm-9" id="content">
-<div class="banner"></div>
-<div class="text">
+
 	<?php if( have_posts()){
 
-		while (have_posts()) {
+		while (have_posts()) { ?>
+
+<div class="col-md-9 col-sm-9" id="content">
+<div class="banner"><?php the_post_thumbnail('large');?></div>
+<div class="text">
+
+<?php 
 
 			the_post();
 
