@@ -207,6 +207,11 @@ body .site-content {
   transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+body .site-content img {
+  max-width: 100%;
+  height: auto;
+}
+
 body .site-content .text {
   padding: 30px;
 }

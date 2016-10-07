@@ -233,6 +233,11 @@ padding: 20px 20px 25px 20px;
     -moz-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
+    img{
+    	max-width: 100%;
+    	height:auto;
+    }
+
     .text{
     	padding: 30px;
     }
