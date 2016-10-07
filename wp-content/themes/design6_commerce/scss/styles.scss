@@ -2,10 +2,17 @@ $mmaincolor :#F44336;
 
 body,html{
 	height:100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .asideVisible{
 	overflow:hidden;
+
+    header .flex-wrap{
+
+            transform: translate3d(-350px, 0, 0);
+
+    }
 }
 
 .parallax-mirror {
@@ -52,16 +59,19 @@ body{
 	}
 
 
+
+
+
 	header{
 		//background-color: $mmaincolor;
 		position: fixed;
-		top: 0px;
-		top: 0px;
-    	left: 0px;
-    	right: 0px;
+        width:100%;
     	z-index: 9999999;
+        height: 90px;
 
     	transition: 1s ease all;
+
+
 
     	.flex-wrap{
 
@@ -71,6 +81,19 @@ body{
 
     		justify-content: space-between;
     		flex-direction: row;
+
+            width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-name: customMenuScroll;
+    animation-name: customMenuScroll;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+
+
 
     		@media(max-width:1200px){
    				
@@ -215,10 +238,64 @@ body{
 	/*HEADER END*/
 
 	.banner{
-		height: 500px;
+		min-height: 500px;
+
+        .para-text{
+
+                            position: absolute;
+    z-index: 99999999999;
+    color: white;
+    top: 40%;
+       left: 0px;
+    right: 0px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+
+
 		h1{
-			position:absolute;
+
+                font-weight: 400;
+    font-size: 50px;
+
+    margin-bottom: 10px;
+
 		}
+
+        a{
+            color: white;
+            text-decoration: none;
+            background-color:#c42727;
+
+                padding: .875rem 2.1875rem .9375rem;
+                    color: #fff;
+    -webkit-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
+    padding: 1rem 2rem 1.0625rem;
+        border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-align: center;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    display: inline-block;
+    font-size: 1rem;
+                    border-radius: 5px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        p{
+            font-size: 22px;
+        }
+
+                }
 	}
 
 
@@ -244,6 +321,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+
     	height: 90vh;
     	background-size:cover;
     	left: -10px;

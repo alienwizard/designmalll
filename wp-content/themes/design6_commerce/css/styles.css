@@ -1,9 +1,14 @@
 body, html {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .asideVisible {
   overflow: hidden;
+}
+
+.asideVisible header .flex-wrap {
+  transform: translate3d(-350px, 0, 0);
 }
 
 .parallax-mirror {
@@ -50,11 +55,9 @@ body .aside-wrap.open {
 
 body header {
   position: fixed;
-  top: 0px;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  width: 100%;
   z-index: 9999999;
+  height: 90px;
   transition: 1s ease all;
 }
 
@@ -63,6 +66,16 @@ body header .flex-wrap {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-name: customMenuScroll;
+  animation-name: customMenuScroll;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 body header .flex-wrap #logo {
@@ -172,11 +185,56 @@ body header nav {
 }
 
 body .banner {
-  height: 500px;
+  min-height: 500px;
 }
 
-body .banner h1 {
+body .banner .para-text {
   position: absolute;
+  z-index: 99999999999;
+  color: white;
+  top: 40%;
+  left: 0px;
+  right: 0px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+body .banner .para-text h1 {
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+body .banner .para-text a {
+  color: white;
+  text-decoration: none;
+  background-color: #c42727;
+  padding: .875rem 2.1875rem .9375rem;
+  color: #fff;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
+  padding: 1rem 2rem 1.0625rem;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+body .banner .para-text a:hover {
+  text-decoration: underline;
+}
+
+body .banner .para-text p {
+  font-size: 22px;
 }
 
 body .container {

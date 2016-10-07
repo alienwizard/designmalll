@@ -21,11 +21,11 @@
 			</div>
 
 
-								<div class="col-md-8">
+								<div class="col-md-12">
 
 
 
-<h3 class="section-heading" style="width:60%;">Använd formuläret om du vill meddela oss något</h3>
+<h3 class="section-heading" style="text-align:center;">Fyll i formuläret nedan för en kostnadsfri analys</h3>
 <?php echo do_shortcode('[contact-form-7 id="81" title="Kontaktformulär 1"]');?>
 
 
@@ -35,16 +35,8 @@
 
 				</div>
 
-				<div class="col-md-4">
-								<div class="fb-wrap">
-
-			<h3 class="section-heading">Vi finns på Facebook</h3>
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=911661125591162" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-			</div>
-				</div>
-
 							<div class="row">
-				<div class="col-md-12"  id="full-text">
+				<div class="col-md-12"  id="last-text">
 				<?php the_field('last_text'); ?>
 
 				<!--

@@ -1,3 +1,5 @@
+<?php /*template name: commerce frontpage*/ ?>
+
 <?php get_header(); ?>
 
 <div class="main-wrapper">
@@ -5,9 +7,13 @@
 <section class="banner" >
 <div class="parallax-window" data-parallax="scroll" ">
 
-<div class="para-image" style="background-image:url('<?php the_post_thumbnail_url('full');?>')"></div>
+<div class="para-image" style="background-image:linear-gradient(180deg, rgba(61, 61, 61, .2), rgba(61, 61, 61, .2)), url('<?php the_post_thumbnail_url('full');?>')"></div>
 
-	<h1>Vi säljer det du behöver</h1>
+<div class="para-text">
+	<h1>Välkommen till Mediahelp</h1>
+	<p>Vi är en mediebyrå specialiserade på digitala medier i alla dess former. Vi finns till för att hjälpa dig och ditt företag att på bästa sätt effektivisera och optimera era marknadsinsatser och synbarhet på nätet.</p>
+	<a href="#">Boka ett möte</a>
+	</div>
 </div>
 
 
@@ -15,23 +21,26 @@
 
 <section id="process">
 	<div class="l-container">
-		<div class="steps" id="step1">
-			<div class="icon"><img src="<?php bloginfo('template_url')?>/img/zoom_icon.png"></div>
-			<p>Lorem ipusm</p>
-		</div>
 
-		<div class="staps" id="step2">		<div class="icon"><img src="<?php bloginfo('template_url')?>/img/hand_pic.png"></div>
-		<div class="info">
-		<p>Lorem ipusm</p>
-		</div></div>
+	<?php $args = array('post_type' => 'slidebox', 'posts_per_page' => -1);?>
+
+	<?php $query = new WP_query($args); ?>
+
+	<?php while($query->have_posts()){ ?>
+		<?php $query->the_post(); ?>
 
 
-		<div class="steps" id="step3">
-					<div class="icon"><img src="<?php bloginfo('template_url')?>/img/computer.png"></div>
-		<div class="info">
-			<p>Lorem ipusm</p>
-		</div>
-		</div>
+
+
+	<div class="steps">
+		<img src="<?php the_post_thumbnail_url('large');?>">
+		<?php the_content(); ?>
+	</div>
+
+
+
+		<?php } ?>
+
 
 	</div>
 </section>

@@ -2,6 +2,11 @@ $(document).ready(function(){
 
 	var logoStartSize = $('body header #logo img').css('max-width')
 	var headerSize = $('header').css('height');
+	var headerColor = $('header').css('background-color');
+
+	$('.aside-wrap').css({
+		'background-color': $('header').css('background-color')
+	})
 
 	$('banner').css({
 		'margin-top':headerSize
@@ -19,8 +24,8 @@ $(document).ready(function(){
 				})
 
 				$('header').css({
-					'height' : '40px',
-					'background-color':'#0074c8'
+					'height' : '80px',
+					'background-color': headerColor
 				})
 
 
