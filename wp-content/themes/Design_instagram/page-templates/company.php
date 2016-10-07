@@ -26,19 +26,6 @@ get_header();
 <div class="col-md-8">
 	<?php the_content(); ?>
 </div>
-
-<div class="col-md-4">
-		<div class="row">
-		<img src="<?php bloginfo('template_url')?>/images/fordon1.jpg">
-	</div>
-		<div class="row">
-		<img src="<?php bloginfo('template_url')?>/images/fordon2.jpg">
-	</div>
-			<div class="row">
-		<img src="<?php bloginfo('template_url')?>/images/fordon3.jpg">
-	</div>
-
-</div>
 </div>
 
 </div>

@@ -42,6 +42,8 @@
  * @author     Studio 24 Ltd  <info@studio24.net>
  */
 
+//hello
+
 
 // Absolute path to the WordPress directory
 if (!defined('ABSPATH')) {

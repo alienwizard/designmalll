@@ -1,1 +1,7 @@
 node_modules
+wp-content-test.php
+wp-config.php
+wp-config.development.php
+wp-config.production.php
+wp-config.staging.php
+wp-config.default.php
