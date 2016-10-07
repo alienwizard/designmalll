@@ -5,77 +5,162 @@ body {
   overflow: hidden;
 }
 
-body .container {
-  width: 1300px;
+body .page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
-body .container #sidopanel {
-  background-color: #292929;
+body .header-mobile {
+  height: 52px;
+  background: #1c1c1c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body .header-mobile {
+    display: block;
+    z-index: 140;
+  }
+}
+
+body nav {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 130;
+  -webkit-transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body nav #sidopanel {
+  background: #262626;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  z-index: 34;
   height: 100vh;
-  padding: 19px;
-  font-family: "open sans";
+  width: 250px;
+  padding-bottom: 60px;
+  position: relative;
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  transition: all 350ms ease;
 }
 
-body .container #sidopanel .search {
+body nav .search {
   position: relative;
 }
 
-body .container #sidopanel .search input {
-  position: absolute;
-  background-color: black;
+body nav .search form {
+  padding: 9px 30px;
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+
+body nav .search form input {
+  background-color: #1c1c1c;
   border: none;
+  color: white;
+  float: left;
+  padding: 0;
+  width: 80%;
 }
 
-body .container #sidopanel .logga {
-  width: 100%;
+body nav .search form input[type="number"] input[type="text"], body nav .search form input[type="email"], body nav .search form input[type="tel"], body nav .search form input[type="number"], body nav .search form input[type="search"], body nav .search form textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  border: none;
+  padding: 0 0.8125em;
+  height: 2.4375em;
+  position: relative;
+  vertical-align: middle;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
 }
 
-body .container #sidopanel .logga img {
+body nav .logga {
+  display: block;
+  padding: 20px 20px 25px 20px;
+  border: none;
+  color: #fff;
+  background: none;
+}
+
+body nav .logga img {
   width: 100%;
   height: auto;
   display: block;
   max-width: 250px;
 }
 
-body .container #sidopanel .menu {
-  margin-top: 30px;
-}
-
-body .container #sidopanel .menu .main_nav {
+body nav .menu .main_nav {
   list-style: none;
   padding: 0px;
 }
 
-body .container #sidopanel .menu .main_nav .current-menu-item a {
+body nav .menu .main_nav .current-menu-item a {
   color: red;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0px 30px;
+  border-bottom: none;
+  line-height: 55px;
+  position: relative;
 }
 
-body .container #sidopanel .menu .main_nav li {
+body nav .menu .main_nav li {
   padding: 10px 0px;
   color: blue;
 }
 
-body .container #sidopanel .menu .main_nav li a {
-  color: white;
-  font-weight: 900;
-  font-size: 20px;
+body nav .menu .main_nav li a {
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  font-size: 17px;
+  color: #fff;
+  padding: 0px 30px;
+  border-bottom: none;
+  line-height: 55px;
+  position: relative;
 }
 
-body .container #sidopanel .social {
+body nav .social {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: row;
+  padding: 0px 30px;
 }
 
-body .container #sidopanel .social i {
+body nav .social i {
   font-size: 25px;
   flex-basis: 15%;
   color: white;
 }
 
-body .container #sidopanel .partners {
+body nav .partners {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -83,26 +168,47 @@ body .container #sidopanel .partners {
   justify-content: space-around;
 }
 
-body .container #sidopanel .partners .partner {
+body nav .partners .partner {
   display: block;
   height: auto;
   flex-basis: 33%;
 }
 
-body .container #sidopanel .partners .partner img {
+body nav .partners .partner img {
   max-width: 100px;
 }
 
 @media (min-width: 1400px) {
-  body .container #sidopanel {
+  body nav {
     left: 0%;
   }
 }
 
 @media (max-width: 1400px) {
-  body .container #sidopanel {
+  body nav {
     left: 1%;
   }
+}
+
+body .site-content {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  left: 250px;
+  z-index: 30;
+  color: #1c1c1c;
+  background: #fff;
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body .site-content .text {
+  padding: 30px;
 }
 
 body .container #content {
@@ -245,3 +351,5 @@ body .container #content .tjanst-flex .tjanst img {
 ::-webkit-scrollbar-track {
   background: #fff;
 }
+
+/**/
