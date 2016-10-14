@@ -46,7 +46,7 @@
 
 
 
-						<div class="branding">
+			<div class="branding">
 				<?php if (!is_front_page()): ?>
 					<?php 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -61,7 +61,6 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $image[0]; ?>"></a>
 				<?php endif; ?>
 			</div>
-			<div class="boxout"></div>
 
 
 

@@ -1013,13 +1013,13 @@ header .top-header #left-nav #menu-leftmeny {
   float: right;
 }
 header .top-header .center-menu {
-  display: inline-block;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   left: 0px;
   right: 0px;
 }
 header .top-header .branding {
-  position: absolute;
   display: inline-block;
   text-align: center;
   padding-left: 15px;

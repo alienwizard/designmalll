@@ -109,10 +109,10 @@ jQuery(function($){
 				});
 
 
-				var headerW = $('.branding img').width();
+				//var headerW = $('.branding img').width();
 
-				var boxOutW = $('.boxout').width();
-
+				//var boxOutW = $('.boxout').width();
+/*
 
 
 				$('.branding').css({
@@ -120,6 +120,7 @@ jQuery(function($){
 					'margin-left': -headerW/2,
 					//'margin-right': headerW/2,
 				})
+				*/
 /*
 
 				var $grid = $('.grid').masonry({
@@ -164,8 +165,6 @@ jQuery(function($){
 				$(window).scroll(function(e){
 
 					console.log($(document).height());
-
-					console.log(body[0].scrollTop);
 
 
 					if (body[0].scrollTop > 100) {

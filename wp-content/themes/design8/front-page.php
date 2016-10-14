@@ -20,21 +20,6 @@
 				</div>
 			</div>
 
-
-								<div class="col-md-12">
-
-
-
-<h3 class="section-heading" style="text-align:center;">Fyll i formuläret nedan för en kostnadsfri analys</h3>
-<?php echo do_shortcode('[contact-form-7 id="81" title="Kontaktformulär 1"]');?>
-
-
-
-
-
-
-				</div>
-
 							<div class="row">
 				<div class="col-md-12"  id="last-text">
 				<?php the_field('last_text'); ?>
