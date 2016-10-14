@@ -2,14 +2,27 @@ $(document).ready(function(){
 
 	var logoStartSize = $('body header #logo img').css('max-width')
 	var headerSize = $('header').css('height');
-	var headerColor = $('header').css('background-color');
+	var textColor = document.styleSheets[5].cssRules[2].style.color
+	var headerColor = document.styleSheets[5].cssRules[1].style.backgroundColor;
+	var asideColor = headerColor
+
+	console.log(document.styleSheets[5].cssRules[2].style.color);
 
 	$('.aside-wrap').css({
-		'background-color': $('header').css('background-color')
+		'background-color': asideColor
 	})
 
 	$('banner').css({
 		'margin-top':headerSize
+	})
+
+	$('body header ul li a').css({
+		color: textColor
+	})
+
+	$('body .aside-wrap ul li a').css({
+		color: textColor
+
 	})
 	console.log(headerSize)
 
@@ -49,11 +62,24 @@ $(document).ready(function(){
 
 	$('.bars').click(function(e){
 
-				var e = e || window.event;
+		console.log('click');
+
+		var e = e || window.event;
 
 		var target = e.target || e.srcElement;
 
 		console.log(target.className);
+
+
+		if(target.className == "bars open"){
+
+		$('.bars').removeClass('open');
+		$('.page-wrapper').removeClass('open');
+		$('.aside-wrap').removeClass('open');
+		$('html').removeClass('asideVisible');
+
+		}else{
+
 
 		$('.bars').addClass('open')
 		$('.aside-wrap').addClass('open');
@@ -61,17 +87,15 @@ $(document).ready(function(){
 		$('.page-wrapper').addClass('open');
 		$('html').addClass('asideVisible');
 
-				if(target.className == "bars open"){
-
-		$('.bars').removeClass('open');
-		$('.page-wrapper').removeClass('open');
-		$('.aside-wrap').removeClass('open');
-		$('html').removeClass('asideVisible');
-
 		}
 
 
+
+
+
+
 		})
+	/*
 
 		document.addEventListener('click', function(e){
 
@@ -91,6 +115,8 @@ $(document).ready(function(){
 		}
 
 	}, false);
+
+	*/
 
 	});
 	

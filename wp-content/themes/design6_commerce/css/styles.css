@@ -49,6 +49,14 @@ body .aside-wrap {
   transition: transform 350ms 50ms,width 350ms 0s;
 }
 
+body .aside-wrap ul {
+  list-style: none;
+}
+
+body .aside-wrap ul li a {
+  color: white;
+}
+
 body .aside-wrap.open {
   transform: translate3d(-350px, 0, 0);
 }
@@ -56,17 +64,19 @@ body .aside-wrap.open {
 body header {
   position: fixed;
   width: 100%;
-  z-index: 9999999;
+  z-index: 99;
   height: 90px;
   transition: 1s ease all;
+  background-color: rgba(196, 39, 39, 0);
 }
 
 body header .flex-wrap {
   width: 100%;
   display: flex;
+  max-width: 80rem;
   justify-content: space-between;
   flex-direction: row;
-  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -81,6 +91,11 @@ body header .flex-wrap {
 body header .flex-wrap #logo {
   padding-left: 80px;
   transition: 1s ease all;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
 }
 
 body header .flex-wrap #logo img {
@@ -93,11 +108,16 @@ body header .flex-wrap .bars {
   position: relative;
   height: 40px;
   width: 40px;
-  align-self: flex-end;
+  align-self: center;
   transition: 1s ease all;
 }
 
+body header .flex-wrap .bars:hover {
+  cursor: pointer;
+}
+
 body header .flex-wrap .bars span {
+  pointer-events: none;
   display: block;
   position: absolute;
   height: 2px;
@@ -190,7 +210,6 @@ body .banner {
 
 body .banner .para-text {
   position: absolute;
-  z-index: 99999999999;
   color: white;
   top: 40%;
   left: 0px;
@@ -198,6 +217,7 @@ body .banner .para-text {
   width: 80%;
   margin: auto;
   text-align: center;
+  z-index: 1;
 }
 
 body .banner .para-text h1 {

@@ -46,9 +46,6 @@
 </section>
 
 
-
-
-
 <div class="container">
 
 <div class="product">
@@ -80,6 +77,10 @@
 	
 
 </div>
+
+<section class="textsection">
+	<div class="container"> </div>
+</section>
 
 </div>
 

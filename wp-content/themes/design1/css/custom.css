@@ -984,3 +984,15 @@ form .col-md-4{
     font-size: 18px;
 }
 
+.coworker{
+    height: 500px;
+}
+
+
+
+.coworker img{
+    max-height: 240px;
+    width: auto;
+    display: block;
+    margin: auto;
+}

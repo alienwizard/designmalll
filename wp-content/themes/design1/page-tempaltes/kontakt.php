@@ -205,7 +205,17 @@ $(document).ready(function(){
 				} // end while
 			} // end if
 ?>
-<?php $query8 = new WP_Query(array( 'post_type' => 'arbetare', 'post_per_page' => -1) );
+
+</div>
+
+	<div class="map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.4146643649083!2d17.690205516093744!3d59.858860581847225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x691af148fefd86d8!2sMediahelp+Sverige+AB!5e0!3m2!1sen!2sse!4v1471525224245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+
+	<div class="row">
+	<h3>Det här är vi:</h3>
+		<?php $query8 = new WP_Query(array( 'post_type' => 'arbetare', 'post_per_page' => -1) );
 //print_r($query8);
 					  while ( $query8->have_posts() ) : $query8->the_post(); ?>
 
@@ -217,11 +227,6 @@ $(document).ready(function(){
 		<?php the_content();?>
 		</div>
 	    <?php endwhile; wp_reset_postdata();?>
-</div>
-
-	<div class="map">
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.4146643649083!2d17.690205516093744!3d59.858860581847225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x691af148fefd86d8!2sMediahelp+Sverige+AB!5e0!3m2!1sen!2sse!4v1471525224245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 	</div>
 </section>

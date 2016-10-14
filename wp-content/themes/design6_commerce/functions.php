@@ -124,7 +124,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
          $wp_customize, //Pass the $wp_customize object (required)
          'mytheme_topheaderbackgroundcolor', //Set a unique ID for the control
          array(
-            'label' => __( 'Färg för sidhuvud', 'mytheme' ), //Admin-visible name of the control
+            'label' => __( 'Färg för sidhuvud och sidmeny', 'mytheme' ), //Admin-visible name of the control
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'header_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
@@ -138,7 +138,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
          $wp_customize, //Pass the $wp_customize object (required)
          'mytheme_link_textcolor', //Set a unique ID for the control
          array(
-            'label' => __( 'Färg för text i navigationsmeny', 'mytheme' ), //Admin-visible name of the control
+            'label' => __( 'Färg för text i navigationsmeny och sidmeny', 'mytheme' ), //Admin-visible name of the control
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'header_textcolor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
@@ -274,7 +274,7 @@ function mytheme_customizer_live_preview()
 function mytheme_customize_css()
 {
     ?>
-         <style type="text/css">
+         <style type="text/css" id="wp-adminCss">
 
          body{
          	background-color: <?php echo get_theme_mod('backgroundColor', '000000'); ?>;
@@ -282,8 +282,12 @@ function mytheme_customize_css()
          }
 
 
-         .top-header{
+         .top-header-start{
          	background-color: <?php echo get_theme_mod('header_backgroundColor', '000000');?>
+         }
+
+         .navtextColor{
+            color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; 
          }
 
          .border-wrap{
