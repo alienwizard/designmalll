@@ -34,6 +34,14 @@
 
 		<div class="center-menu">
 
+		<div class="mobile-menu">
+								<?php 
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+ ?>
+	<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $image[0]; ?>"></a>
+		</div>
+
 
 			<div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
 

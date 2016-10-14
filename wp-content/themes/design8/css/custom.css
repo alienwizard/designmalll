@@ -58,8 +58,7 @@ table {
   }
 
   header .top-header {
-    height: 3rem;
-    margin-top: 80px;
+    height: 5rem;
   }
   header .top-header .branding {
     left: 0px;
@@ -67,24 +66,23 @@ table {
     margin: 0px;
     margin-left: 0px !important;
     top: -80px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     background-color: #b12727;
   }
   header .top-header nav {
-    height: 3rem;
+    height: 5rem;
   }
   header .top-header nav li {
-    height: 3rem;
+    height: 5rem;
   }
   header .top-header nav a {
-    line-height: 3rem;
+    line-height: 5rem;
   }
   header .top-header #right-nav {
     padding-right: 0px;
     width: initial;
   }
   header .top-header #left-nav {
-    padding-left: 270px;
     width: initial;
   }
   header .top-header #left-nav ul#menu-leftmeny {
@@ -101,13 +99,23 @@ table {
   }
 }
 @media (max-width: 995px) {
+  header .mobile-logo {
+    display: block;
+  }
   header .top-header {
-    height: 4rem;
+    height: auto;
+  }
+  header .top-header img {
+    max-width: 250px;
+  }
+  header .top-header .center-menu {
+    display: block;
   }
   header .top-header .menu-toggle {
     display: block;
     color: white;
     cursor: pointer;
+    margin-bottom: 15px;
   }
   header .top-header nav {
     width: 100%;
@@ -148,9 +156,20 @@ table {
   header .top-header #right-nav ul#menu-rightmeny {
     float: none;
   }
+  header .top-header .branding {
+    display: none;
+  }
 
   .banner .welcomebox {
     width: 70%;
+  }
+
+  .lr-border:before {
+    display: none;
+  }
+
+  .lr-border:after {
+    display: none;
   }
 }
 @media (max-width: 765px) {
@@ -993,6 +1012,9 @@ header {
   position: fixed;
   height: 5rem;
   z-index: 99;
+}
+header .mobile-logo {
+  display: none;
 }
 header .top-header {
   position: relative;
