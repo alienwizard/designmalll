@@ -34,7 +34,7 @@
 
 		<div class="center-menu">
 
-		<div class="mobile-menu">
+		<div class="mobile-logo">
 								<?php 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
