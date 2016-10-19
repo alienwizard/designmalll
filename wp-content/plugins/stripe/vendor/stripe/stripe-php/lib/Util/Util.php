@@ -66,6 +66,7 @@ abstract class Util
         $types = array(
             'account' => 'Stripe\\Account',
             'alipay_account' => 'Stripe\\AlipayAccount',
+            'apple_pay_domain' => 'Stripe\\ApplePayDomain',
             'bank_account' => 'Stripe\\BankAccount',
             'balance_transaction' => 'Stripe\\BalanceTransaction',
             'card' => 'Stripe\\Card',
@@ -90,6 +91,7 @@ abstract class Util
             'sku' => 'Stripe\\SKU',
             'source' => 'Stripe\\Source',
             'subscription' => 'Stripe\\Subscription',
+            'subscription_item' => 'Stripe\\SubscriptionItem',
             'three_d_secure' => 'Stripe\\ThreeDSecure',
             'fee_refund' => 'Stripe\\ApplicationFeeRefund',
             'bitcoin_receiver' => 'Stripe\\BitcoinReceiver',

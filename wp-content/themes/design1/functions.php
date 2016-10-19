@@ -56,6 +56,14 @@ function mytheme_customize_register( $wp_customize ) {
 
     ) );
 
+                                $wp_customize->add_setting( 'sidebar_textColor' , array(
+    'default'     => '#000000',
+    'transport'   => 'postMessage',
+    'type' => 'theme_mod',
+    'capability' => 'edit_theme_options',
+
+    ) );
+
 
 				$wp_customize->add_setting( 'backgroundColor' , array(
     'default'     => '#000000',
@@ -134,6 +142,18 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'label' => __( 'bakgrundsfärg sidofält', 'mytheme' ), //Admin-visible name of the control
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'sidebar_backgroundColor', //Which setting to load and manipulate (serialized is okay)
+            'priority' => 10, //Determines the order this control appears in for the specified section
+         ) 
+      ) );
+
+
+            $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'mytheme_boxtextcolor', //Set a unique ID for the control
+         array(
+            'label' => __( 'textfärg sidofält', 'mytheme' ), //Admin-visible name of the control
+            'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+            'settings' => 'sidebar_textColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
          ) 
       ) );
@@ -275,6 +295,7 @@ function mytheme_customize_css()
 
          	.sidebar-wrapper{
          		background-color: <?php  echo get_theme_mod('sidebar_backgroundColor', '000000'); ?>;
+                color: #<?php  echo get_theme_mod('sidebar_textColor', '000000'); ?>;
          	}
 
          	section.section-white.single{
@@ -284,6 +305,32 @@ function mytheme_customize_css()
          	.left-side-text{
          		 background-color: <?php echo get_theme_mod('boxColor', '000000'); ?>;
          	}
+
+            .small-title{
+                background-color: <?php  echo get_theme_mod('sidebar_backgroundColor', '000000'); ?>;
+                color: <?php  echo get_theme_mod('sidebar_textColor', '000000'); ?>;
+            }
+
+            .single input[type="submit"]{
+                    color: #<?php echo get_theme_mod('textColor', '000000'); ?>;
+                    background-color: <?php echo get_theme_mod('boxColor', '000000'); ?>;
+            }
+
+            .menu-toggle{
+
+                background-color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>;
+
+            }
+
+           header #logo-wrap .menu-toggle .stripe{
+                background-color: #<?php echo get_theme_mod('nav_backgroundColor', '000000');?>
+            }
+
+            .site_nav li{
+                background-color:#<?php echo get_theme_mod('nav_backgroundColor', '000000');?>
+            }
+
+
 
 
 

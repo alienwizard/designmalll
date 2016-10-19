@@ -33,11 +33,36 @@ if ( ! class_exists( 'Stripe_Checkout_Upgrade' ) ) {
 				}
 			}
 
+			if ( version_compare( $old_version, '1.5.4', '<' ) ) {
+				add_action( 'admin_init', array( $this, 'v154_upgrade' ), 12 );
+			}
+
 			$new_version = $base_class->version;
 
 			// TODO This option update is not always getting run.
 			update_option( 'sc_version', $new_version );
 			add_option( 'sc_upgrade_has_run', 1 );
+		}
+
+		public function v154_upgrade() {
+
+			global $sc_options;
+
+			$test_sec = $sc_options->get_setting_value( 'test_secret_key_temp' );
+			$test_pub = $sc_options->get_setting_value( 'test_publishable_key_temp' );
+			$live_sec = $sc_options->get_setting_value( 'live_secret_key_temp' );
+			$live_pub = $sc_options->get_setting_value( 'live_publishable_key_temp' );
+
+			if ( isset( $test_sec ) || isset( $test_pub ) || isset( $live_sec ) || isset( $live_pub ) ) {
+
+				// Delete the old options out
+				$sc_options->delete_setting( 'live_secret_key_temp' );
+				$sc_options->delete_setting( 'test_secret_key_temp' );
+				$sc_options->delete_setting( 'live_publishable_key_temp' );
+				$sc_options->delete_setting( 'test_publishable_key_temp' );
+
+				add_option( 'sc_show_api_notice', 1 );
+			}
 		}
 		
 		/**

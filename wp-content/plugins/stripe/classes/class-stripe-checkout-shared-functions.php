@@ -24,7 +24,7 @@ if ( ! class_exists( 'Stripe_Checkout_Functions' ) ) {
 			// We only want to run the charge if the Token is set
 			if ( isset( $_POST['stripeToken'] ) && isset( $_POST['wp-simple-pay'] ) ) {
 				self::$token = true;
-				add_action( 'init', array( $this, 'charge_card' ) );
+				add_action( 'wp', array( $this, 'charge_card' ) );
 			}
 			
 			// Load Stripe library
@@ -56,20 +56,20 @@ if ( ! class_exists( 'Stripe_Checkout_Functions' ) ) {
 
 			// Check first if in live or test mode.
 			if ( $sc_options->get_setting_value( 'enable_live_key' ) == 1 && $test_mode != 'true' ) {
-				if ( ! ( null === $sc_options->get_setting_value( 'live_secret_key_temp' ) ) ) {
-					$key = $sc_options->get_setting_value( 'live_secret_key_temp' );
-				} else {
-					$key = $sc_options->get_setting_value( 'live_secret_key' );
-				}
+				$key = $sc_options->get_setting_value( 'live_secret_key' );
 			} else {
-				if ( ! ( null === $sc_options->get_setting_value( 'test_secret_key_temp' ) ) ) {
-					$key = $sc_options->get_setting_value( 'test_secret_key_temp' );
-				} else {
-					$key = $sc_options->get_setting_value( 'test_secret_key' );
-				}
+				$key = $sc_options->get_setting_value( 'test_secret_key' );
 			}
-			
+
+			$key = apply_filters( 'simpay_secret_key', $key, $test_mode );
+
 			\Stripe\Stripe::setApiKey( $key );
+
+			// Send plugin name & version along with API calls.
+			// Check if method exists in case we've loaded an older version of the Stripe PHP library from another plugin.
+			if ( method_exists( '\Stripe\Stripe', 'setAppInfo' ) ) {
+				\Stripe\Stripe::setAppInfo( SIMPAY_NAME, SIMPAY_VERSION, SC_WEBSITE_BASE_URL );
+			}
 		}
 
 		/**

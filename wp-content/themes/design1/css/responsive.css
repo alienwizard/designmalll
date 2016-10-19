@@ -1,9 +1,9 @@
 .menu-toggle {
-    height: 45px;
-    width: 50px;
+    height: 32px;
+    width: 32px;
     background-color: #AFD0EB;
     position: absolute;
-    top: 50px;
+    top: 8px;
     right: 50px;
     border-radius: 3px;
     float: right;
@@ -17,44 +17,49 @@
 
 .menu-toggle .stripe:nth-child(1){
         background-color: white;
-    position: absolute;
-    top: 10px;
-    height: 4px;
-    z-index: 10;
-    display: block;
-    overflow: auto;
-    width: 80%;
-    display: block;
-    margin: auto;
-    left: 5px;
+        position: absolute;
+        top: 5px;
+        height: 4px;
+        z-index: 10;
+        display: block;
+        overflow: auto;
+        width: 80%;
+        display: block;
+        margin: auto;
+        left: 5px;
+        left: 0px;
+        right: 0px;
 }
 
 .menu-toggle .stripe:nth-child(2){
         background-color: white;
-    position: absolute;
-    top: 20px;
-    height: 4px;
-    z-index: 10;
-    display: block;
-    overflow: auto;
-    width: 80%;
-    display: block;
-    margin: auto;
-    left: 5px;
+        position: absolute;
+        top: 15px;
+        height: 4px;
+        z-index: 10;
+        display: block;
+        overflow: auto;
+        width: 80%;
+        display: block;
+        margin: auto;
+        left: 0px;
+        right: 0px;
 }
 
 .menu-toggle .stripe:nth-child(3){
         background-color: white;
-    position: absolute;
-    top: 30px;
-    height: 4px;
-    z-index: 10;
-    display: block;
-    overflow: auto;
-    width: 80%;
-    display: block;
-    margin: auto;
-    left: 5px;
+        position: absolute;
+        top: 24px;
+        height: 4px;
+        z-index: 10;
+        display: block;
+        overflow: auto;
+        width: 80%;
+        display: block;
+        margin: auto;
+        left: 4px;
+        left: 0px;
+        right: 0px;
 }
 
 @media (min-width: 1200px){
@@ -111,21 +116,21 @@
 
 .nav-menu{
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     height: initial;
-    float: none;
-    left: 0px;
-    right:0px;
+    /* float: none; */
+    /* left: 0px; */
+    /* right:0px; */
     z-index: 99;
-    top: 155px;
+    /* top: 155px; */
 }
 
     .menu-main-menu-container {
-    position: initial;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: #2A6598;
+    /* position: initial; */
+    /* left: 0px; */
+    /* right: 0px; */
+    /* bottom: 0px; */
+    /* background-color: #656565; */
     text-align: center;
 }
 header{
