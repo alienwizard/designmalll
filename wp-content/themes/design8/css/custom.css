@@ -1434,7 +1434,7 @@ section#facebook {
 }
 #intro img {
   max-height: 900px;
-  display: block;
+  display: inline-block;
   max-width: 100%;
 }
 
