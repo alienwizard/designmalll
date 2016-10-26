@@ -13,8 +13,8 @@
 
 			<div class="row">
 				<div class="col-md-12" id="full-text">
-				<h1 class="lr-border">Välkommen till oss!</h1>
-				<p style="margin-bottom:100px;"><?php the_content(); ?></p>
+				<h1 class="lr-border"><?php the_field('welcome-title'); ?></h1>
+				<?php the_content(); ?>
 				<?php the_field('first_text'); ?>
 					<!--<p>Traktor & Maskin i Sörmland AB är ett privatägt företag som verkar inom de gröna näringarna. Vi verkar i Sörmland och är återförsäljare för Massey Ferguson som är ett av de världsledande företagen inom lantbrukssektorn. Vi genomsyras av en äkta vilja att ge god service och se nöjda kunder. Långsiktiga relationer med våra kunder är viktigt för oss.</p>-->
 				</div>

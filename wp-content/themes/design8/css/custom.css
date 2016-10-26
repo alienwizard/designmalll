@@ -699,9 +699,6 @@ video {
   letter-spacing: 0.7px;
   font-size: 16px;
 }
-.page-wrapper #kontakt .container {
-  margin: 100px auto;
-}
 .page-wrapper #kontakt .worker-wrap {
   display: -webkit-box;
   display: -webkit-flex;
