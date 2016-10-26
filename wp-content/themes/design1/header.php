@@ -58,9 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <header>
 	<div id="logo-wrap">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
+<div class="flexwrapper">
 <div class="top-header-logo">
 <?php 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -79,17 +77,5 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	</div>
 </div>
 </div>
-<div class="row>">
-<section class="banner" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
-<div class="overlay"></div>
-<div class="container">
-	<div class="header-logo">
 
-
-</div>
-</div>
-
-
-</section>
-</div>
 </header>

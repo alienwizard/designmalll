@@ -8,23 +8,33 @@ body{
 p{
     font-size: 1.5em;
     font-family: helvetica-neu;
-    width: 80%;
     margin: auto;
 }
 h1,h2,h3,h4{
     font-family: 'Montserrat', sans-serif;
     /* font-size: 1.2em; */
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 header{
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;
     display: block;
-    position: relative;
+    position: fixed;
     top: 0px;
     z-index: 100;
     font-family: 'Montserrat', sans-serif;
     background-color: #FEFEFE;
+    /* height: 60px; */
+}
+
+header .flexwrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .logo{
@@ -104,9 +114,9 @@ ul{
 .banner{
     repeat:no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center center;
     text-align: center;
-    height: 500px;
+    height: 70vh;
     padding: 150px 0px;
     padding-bottom: 200px;
     padding-top: 100px;
@@ -191,7 +201,7 @@ section.banner h3 {
 }
 
 #logo-wrap{
-    /* height: 110px; */
+    height: 80px;
     border-bottom: 0px solid #000000;
     padding: 10px 0px;
 }
@@ -285,22 +295,24 @@ header .nav-menu ul{
     display: block;
     padding: 0px;
     margin: 0px;
+    clear: both;
 }
 .site_nav li {
     float: left;
     /* position: static; */
     margin: 0;
-    padding: 15px 15px;
+    padding: 20px;
     /* padding-top: 25px; */
 }
 
 .site_nav li a {
     font-size: 18px;
-    letter-spacing: 1.1px;
+    letter-spacing: 1.4px;
     color: black;
-    font-size: 19px;
+    font-size: 14px;
     /* padding-bottom: 5px; */
-    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-family: Arial;
     font-weight: 700;
 }
 .site_nav .current_page_item a:after{
@@ -475,7 +487,7 @@ height: 50px;
 }
 
 .main-text-wrap{
-    width: 90%;
+    width: 100%;
     padding: 20px 0px;
     padding-bottom: 40px;
     margin: auto;
@@ -483,7 +495,7 @@ height: 50px;
 }
 .main-text-wrap h1{
     margin-top: 0px;
-    font-size: 45px;
+    font-size: 35px;
     color: black;
     text-transform: uppercase;
     text-align: center;
@@ -692,6 +704,7 @@ footer .textwidget{
 
 .section-white .container{
     position: relative;
+    min-height: 60vh;
 }
 
 .sidebar {
@@ -724,7 +737,7 @@ footer .textwidget{
 
 h2.rounded {
     padding: 10px 15px;
-    /* background-color: #AFD0EB; */
+    background-color: #76c0e9;
     margin: 0px;
     font-size: 20px;
     color: #FFFFFF;
@@ -761,6 +774,7 @@ input#s {
     width: 70%;
     border: 0px;
     padding: 15px 10px;
+    background-color: #fbfbf8;
     color: black;
     margin: 20px 0px;
     display: block;
@@ -788,9 +802,9 @@ input#searchsubmit{
 
 
 .top-header-logo{
-    width: 20%;
-    padding: 20px 0px;
-    float: left;
+    /* width: 20%; */
+    /* padding: 20px 0px; */
+    /* float: left; */
 }
 
 .top-header-logo img{
@@ -798,11 +812,12 @@ input#searchsubmit{
 }
 
 .nav-menu{
-    width: 70%;
-    float: right;
+    /* width: 70%; */
+    /* float: right; */
     /* height: 110px; */
     /* position: relative; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    align-self: center;
 }
 
 .padding{
@@ -850,7 +865,7 @@ section.section-white.single h3{
 }
 
 .coworker {
-    width: 50%;
+    width: 30%;
     float: left;
     padding: 15px 0px;
     text-align: center;
@@ -983,6 +998,7 @@ h1.search-title {
 
 form#searchform {
     overflow: auto;
+    background-color: #eaeaea;
 }
 
 form .row{
@@ -1030,7 +1046,21 @@ form .col-md-4{
 div#wpcf7-f84-o1{
     margin: 15px 0px;
 }
+.cta{
+    text-align: right;
+    margin-top: 50px;
+}
 
-.box-wrap{
-    margin-bottom: 30px;
+.cta a{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cta i{align-self: center;font-size: 35px;color: white;padding: 9px;width: 50px;border: 2px solid white;border-radius: 50%;height: 50px;text-align: center;display: flex;margin-right: 10px;}
+
+.cta h2{
+    color: white;
+    margin: 0px;
+    font-size: 30px;
+    align-self: center;
 }

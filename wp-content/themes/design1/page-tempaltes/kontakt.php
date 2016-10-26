@@ -160,6 +160,21 @@ $(document).ready(function(){
 });
 })(jQuery);
 </script>
+<section class="map-banner" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
+			<div class="map">
+				<?php the_field('karta');?>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.4146643649083!2d17.690205516093744!3d59.858860581847225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x691af148fefd86d8!2sMediahelp+Sverige+AB!5e0!3m2!1sen!2sse!4v1471525224245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+
+<div class="container">
+	<div class="header-logo">
+
+
+</div>
+</div>
+
+
+</section>
 <section class="section-white single">
 	<div class="container">
 		<div class="row">
@@ -177,19 +192,7 @@ $(document).ready(function(){
 				} // end if
 			?>
 		</div>
-		<div class="employee-wrap">
-				<h2>Det här är vi:</h2>
-				<?php $query8 = new WP_Query(array( 'post_type' => 'arbetare', 'post_per_page' => -1) );
-				//print_r($query8);
-				while ( $query8->have_posts() ) : $query8->the_post(); ?>
-				<div class="coworker">
-					<?php the_post_thumbnail('medium')?>
-					<?php the_title('<h4>', '</h4>');  ?>
-					<?php the_content();?>
-				</div>
-				<?php endwhile; wp_reset_postdata();?>
-				<div class="clearfix"></div>
-			</div>
+
 			</div>
 		<div class="col-md-6">
 		<div class="box-wrap">
@@ -199,13 +202,31 @@ $(document).ready(function(){
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.4146643649083!2d17.690205516093744!3d59.858860581847225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x691af148fefd86d8!2sMediahelp+Sverige+AB!5e0!3m2!1sen!2sse!4v1471525224245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
-		<div class="box-wrap">
+
+		</div>
+		<div class="col-md-6">
+					<div class="box-wrap">
 			<div class="form">
 				<h2 class="small-title">Fyll i formuläret så återkommer vi så fort vi kan</h2>
 				<?php echo do_shortcode(the_field('kontaktformular'));?>
 			</div>
 		</div>
 		</div>
+		</div>
+		<div class="row">
+						<div class="employee-wrap">
+				<h2>Det här är vi:</h2>
+				<?php $query8 = new WP_Query(array( 'post_type' => 'arbetare', 'post_per_page' => -1) );
+				//print_r($query8);
+				while ( $query8->have_posts() ) : $query8->the_post(); ?>
+				<div class="coworker col-md-4 col-sm-4">
+					<div class="img-frame"><?php the_post_thumbnail('medium')?></div>
+					<?php the_title('<h4>', '</h4>');  ?>
+					<?php the_content();?>
+				</div>
+				<?php endwhile; wp_reset_postdata();?>
+				<div class="clearfix"></div>
+			</div>
 		</div>
 	</div>
 </section>

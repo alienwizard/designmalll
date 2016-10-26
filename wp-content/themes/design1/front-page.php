@@ -4,7 +4,18 @@ get_header();
 
 ?>
 
+<section class="banner" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
+<div class="overlay"></div>
+<div class="container">
+	<div class="cta">
+	<a href="tel:030403"><i class="fa fa-phone" aria-hidden="true"></i><h2>Ring oss idag: 08-702 01 81</h2></a>
 
+
+</div>
+</div>
+
+
+</section>
 <section class="section-white">
 
 	<div class="container">

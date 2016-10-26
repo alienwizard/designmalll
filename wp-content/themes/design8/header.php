@@ -16,11 +16,6 @@
 
 		<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
 
-		<script type="text/javascript">
-			
-			console.log('header');
-		</script>
-
 		<?php wp_head() ?>
 
 <script src="https://use.typekit.net/ftf1kak.js"></script>
@@ -35,7 +30,7 @@
 		<div class="center-menu">
 
 		<div class="mobile-logo">
-								<?php 
+								<?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
  ?>
@@ -45,7 +40,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 			<div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-				<?php 
+				<?php
 				wp_nav_menu(array(
 				'theme_location' => 'left-menu',
 				'container'      => 'nav',
@@ -55,19 +50,11 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 
 			<div class="branding">
-				<?php if (!is_front_page()): ?>
-					<?php 
+					<?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
  ?>
 	<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $image[0]; ?>"></a>
-				<?php else: ?>
-					<?php 
-$custom_logo_id = get_theme_mod( 'custom_logo' );
-$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
- ?>
-	<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $image[0]; ?>"></a>
-				<?php endif; ?>
 			</div>
 
 
@@ -78,7 +65,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				'theme_location' => 'right-menu',
 				'container'      => 'nav',
 				'container_id'   => 'right-nav',
-				
+
 			))
 				/*wp_nav_menu(array(
 				'theme_location' => 'main-nav',
@@ -105,5 +92,3 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			<div id="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
 			<div id="pintrest"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
 		</div>-->
-
-
