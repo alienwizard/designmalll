@@ -809,6 +809,7 @@ input#searchsubmit{
 
 .top-header-logo img{
    width: 100%;
+  max-width: 250px;
 }
 
 .nav-menu{

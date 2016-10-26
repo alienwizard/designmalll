@@ -320,7 +320,7 @@ function mytheme_customize_css()
          }
 
 
-         .top-header{
+         header .top-header{
          	background-color: <?php echo get_theme_mod('header_backgroundColor', '000000');?>
          }
 
@@ -328,7 +328,11 @@ function mytheme_customize_css()
          	    background-color: <?php echo get_theme_mod('boxColor', '000000'); ?>;
          }
 
-           .bottom-header a { color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; }
+          header .top-header nav a { color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; }
+
+					.fa-search{
+						 color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; 
+					}
 
          	.bottom-header{
 

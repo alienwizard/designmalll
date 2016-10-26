@@ -14,7 +14,9 @@
 	//Update site title color in real time...
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( newval ) {
-			$('.bottom-header a').css('color', newval );
+			$('.top-header a').css('color', newval );
+      $('.fa-search').css('color', newval);
+
 		} );
 	} );
 
