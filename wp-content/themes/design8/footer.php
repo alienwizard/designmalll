@@ -21,7 +21,7 @@
 
 		<div class="bot-footer">
 
-			<p class="footer-copyright">Copyright &copy; <?= date('Y') ?> Mediahelp Sverige AB></p>
+			<p class="footer-copyright">Copyright &copy; <?= date('Y') ?> Mediahelp Sverige AB</p>
 
 			</div>
 

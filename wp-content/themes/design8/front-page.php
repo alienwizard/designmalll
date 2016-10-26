@@ -15,20 +15,25 @@
 				<div class="col-md-12" id="full-text">
 				<h1 class="lr-border"><?php the_field('welcome-title'); ?></h1>
 				<?php the_content(); ?>
-				<?php the_field('first_text'); ?>
-					<!--<p>Traktor & Maskin i Sörmland AB är ett privatägt företag som verkar inom de gröna näringarna. Vi verkar i Sörmland och är återförsäljare för Massey Ferguson som är ett av de världsledande företagen inom lantbrukssektorn. Vi genomsyras av en äkta vilja att ge god service och se nöjda kunder. Långsiktiga relationer med våra kunder är viktigt för oss.</p>-->
 				</div>
 			</div>
 
 							<div class="row">
-				<div class="col-md-12"  id="last-text">
-				<?php the_field('last_text'); ?>
+								<?php
 
-				<!--
-					<p>Traktor & Maskin i Sörmland verkar i hela Sörmland med försäljning och service av traktorer, tröskor och jordbruksrelaterade produkter. Vårt mål är att bli ett framstående maskinbolag i Sörmland och Er partner genom god service, spetskompetens och ny teknik.</p>
+								$lasttext = get_field('last_text');
 
-					<strong>Har du några frågor och funderingar slå oss en signal på 0155-714 40 – Välkomna!</strong>-->
-				</div>
+								if ($lasttext != "") { ?>
+
+									<div class="col-md-12"  id="last-text">
+									<?php the_field('last_text'); ?>
+
+									</div>
+
+							<?php	}
+
+								?>
+
 			</div>
 
 
