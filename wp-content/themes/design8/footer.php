@@ -3,17 +3,15 @@
 		<div class="container">
 		<div class="row">
 		<div id="left-field" class="col-md-4">
-		<h3>Mediahelp Sverige AB</h3>
-		<?php dynamic_sidebar( 'footer_left' ); ?> 
-			
+		<?php dynamic_sidebar( 'footer_left' ); ?>
+
 		</div>
 		<div id="middle-field" class="col-md-4">
-		<h3>Postadress</h3>
-		<?php dynamic_sidebar( 'footer_center' ); ?> 
-			
+		<?php dynamic_sidebar( 'footer_center' ); ?>
+
 		</div>
 		<div id="right-field" class="col-md-4 map">
-		<?php dynamic_sidebar( 'footer_right' ); ?> 
+		<?php dynamic_sidebar( 'footer_right' ); ?>
 		<!--<i class="fa fa-facebook-official" aria-hidden="true"></i>-->
 		</div>
 		</div>
@@ -23,7 +21,7 @@
 
 		<div class="bot-footer">
 
-			<p class="footer-copyright">Copyright &copy; <?= date('Y') ?> <?php bloginfo('name') ?></p>
+			<p class="footer-copyright">Copyright &copy; <?= date('Y') ?> Mediahelp Sverige AB></p>
 
 			</div>
 
@@ -41,7 +39,7 @@ console.log('first')
 
 
 		<script type="text/javascript">
-		
+
 		</script>
 	</body>
 	</div>
