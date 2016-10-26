@@ -283,7 +283,7 @@ background:linear-gradient($blackgradient);
  		color: $darkermaincolor;
  		font-size: 17px;
  		font-weight: bold;
- 		margin: 20px 0px 10px 0px; 
+ 		margin: 20px 0px 10px 0px;
 
  	}
  	a{
@@ -352,7 +352,7 @@ h3{
 
 	input[type=submit]{
 		margin-top: 30px;
-		width: 40%; 
+		width: 40%;
 		padding:10px 15px;
 		font-family: montserrat;
 	}
@@ -423,7 +423,7 @@ h3{
 
 
 
-        		}  
+        		}
 
 
         	&:before{
@@ -441,7 +441,7 @@ h3{
         	}
 
 
-        	
+
 
     }
 
@@ -492,8 +492,8 @@ h3{
     bottom: 0px;
 
     h1{
-    
-    
+
+
 /*display: inline-block; */
     left: 0px;
     right: 0px;
@@ -752,13 +752,13 @@ h3{
 					text-align:center;
 				}
 
-				
+
 
 
 				}
 
 				@media(max-width:400px){
-					
+
 					img{
 						width: 100%;
 						display: block;
@@ -792,7 +792,7 @@ h3{
 	 p{
 	line-height:1.25;
 	font-family: Lato;
-	
+
 }
 
 .title-border{
@@ -1003,7 +1003,7 @@ body{
     	border-bottom: 3px solid white;
     }
 
-    	} 
+    	}
 
 
 	section{
@@ -1032,7 +1032,7 @@ body{
 		}
 	}
 
-	
+
 
 	section h1{
 		color: black;
@@ -1155,11 +1155,11 @@ height: $headerHeight;
 		    display: flex;
 		    justify-content:space-between;
 		    flex-direction: row;
-    
+
     left: 0px;
     right: 0px;
 	}
-	
+
 
 
 	.branding{
@@ -1178,13 +1178,6 @@ height: $headerHeight;
    // margin-right: 40px;
     //margin-left: 40px;
 	}
-
-	#local{
-		position:relative;
-		
-	}
-
-
 
 	.search-wrap{
 		float: right;
@@ -1255,7 +1248,7 @@ position: absolute;
   	}
   }
 
-  li { float:left;display: inline-block; 
+  li { float:left;display: inline-block;
 
   	    display: flex;
   	    height: $headerHeight;
@@ -1549,7 +1542,7 @@ section#facebook{
 			float: left;
     width: calc(100%/6);
 
-	
+
 
 			webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -1561,7 +1554,7 @@ section#facebook{
     line-height: 0;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    
+
 
     border: .2vw solid transparent;
 
@@ -1569,7 +1562,7 @@ section#facebook{
 
 			position:relative;
 
-	
+
 			.text{
 transition: 0.5s ease all;
 
@@ -1638,8 +1631,8 @@ transition: 0.5s ease all;
     bottom: -10px;
 
     h1{
-    
-    
+
+
 /*display: inline-block; */
     left: 0px;
     right: 0px;
@@ -1697,7 +1690,7 @@ transition: 0.5s ease all;
 
 	h1{
 
-		
+
 
 		text-align: center;
 		font-family: "montserrat";
@@ -1752,7 +1745,7 @@ transition: 0.5s ease all;
     margin-top: 50px;
     padding: 20px 10px 20px 50px;
 	}
-	
+
 }
 
 #facebook{
@@ -1850,10 +1843,10 @@ transition: 0.5s ease all;
 
 
 			h2:after{
-				
+
 			}
 	}
-		
+
 
 
 
@@ -1898,18 +1891,18 @@ transition: 0.5s ease all;
 
 
 		h2{
-			
+
 			background-color:white;
 			color: black;
 			text-transform: uppercase;
-			
+
 			font-size:30px;
 			padding:20px 40px;
 			z-index: 999;
 			font-weight: 900;
 
 
-			
+
 
 
 		}
@@ -2048,7 +2041,7 @@ margin-top: $headerHeight;
 
 	.bannerbox{
 
-		
+
 		float: left;
 
 		color: black;
@@ -2057,7 +2050,7 @@ margin-top: $headerHeight;
 
 		h1.title{
 			font-size: 40px;
-			margin-top:0px; 
+			margin-top:0px;
 			padding: 40px 10px;
 			text-align: center;
 			margin-bottom: 0px;
@@ -2088,7 +2081,7 @@ margin-top: $headerHeight;
 
 
 
-			} 
+			}
 
 			.whitewrap{
 
@@ -2260,7 +2253,7 @@ section#parallax{
 	}
 
 	.right{
-		
+
 		img{
 
 			float: right;
@@ -2305,7 +2298,7 @@ section#parallax{
 footer{
 
 	//margin-top:50px;
-	
+
 	color:white;
 
 	.map{
@@ -2315,7 +2308,7 @@ footer{
 			width: 100%;
 		}
 	}
-	
+
 
 	.top-footer{
 		background-color: $darkermaincolor;

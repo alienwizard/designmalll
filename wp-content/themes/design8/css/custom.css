@@ -1053,9 +1053,6 @@ header .top-header img {
   max-height: 55px;
   margin-top: 10px;
 }
-header .top-header #local {
-  position: relative;
-}
 header .top-header .search-wrap {
   float: right;
   height: 5rem;

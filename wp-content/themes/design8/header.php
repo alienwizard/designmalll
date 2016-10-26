@@ -75,13 +75,15 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 			<div class="clearfix"></div>
 
+      <div class="" id="local">
+      <div class="search-wrap">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <?php get_search_form();?>
+      </div>
+      </div>
+
 			</div>
-			<div class="" id="local">
-			<div class="search-wrap">
-			<i class="fa fa-search" aria-hidden="true"></i>
-			<?php get_search_form();?>
-			</div>
-			</div>
+
 			</div>
 			<div class="clearfix"></div>
 		</header>
