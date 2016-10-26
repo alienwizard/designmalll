@@ -474,7 +474,9 @@ h3{
 	clear:both;
 }
 
+.banner-img{
 
+}
 .banner{
 
 			.overlay-title-banner {
@@ -1397,9 +1399,12 @@ section#lang-section{
 /*BANNER*/
 
 .banner-img{
+	width: 100%;
 	img{
 		display: block;
 		margin:auto;
+		max-width: 100%;
+		height: auto;
 	}
 }
 
