@@ -168,7 +168,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
          $wp_customize, //Pass the $wp_customize object (required)
          'mytheme_topheaderbackgroundcolor', //Set a unique ID for the control
          array(
-            'label' => __( 'Färg för sidhuvud', 'mytheme' ), //Admin-visible name of the control
+            'label' => __( 'Färg för sidhuvud/sidfot', 'mytheme' ), //Admin-visible name of the control
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'header_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
@@ -237,28 +237,6 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
          )
       ) );
 
-                                                            $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
-         $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_footerbg', //Set a unique ID for the control
-         array(
-            'label' => __( 'Färg för footer', 'mytheme' ), //Admin-visible name of the control
-            'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-            'settings' => 'footer_backgroundColor', //Which setting to load and manipulate (serialized is okay)
-            'priority' => 10, //Determines the order this control appears in for the specified section
-         )
-      ) );
-
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
-         $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_footertext', //Set a unique ID for the control
-         array(
-            'label' => __( 'Färg för text i footer', 'mytheme' ), //Admin-visible name of the control
-            'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-            'settings' => 'footer_textColor', //Which setting to load and manipulate (serialized is okay)
-            'priority' => 10, //Determines the order this control appears in for the specified section
-         )
-      ) );
 
                                                                                           $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
          $wp_customize, //Pass the $wp_customize object (required)
@@ -339,7 +317,7 @@ function mytheme_customize_css()
          		background-color: <?php echo get_theme_mod('nav_backgroundColor', '000000');?>
          	}
 
-					.top-footer{
+				footer	.top-footer{
 
 							background-color: <?php echo get_theme_mod('header_backgroundColor', '000000');?>
 
