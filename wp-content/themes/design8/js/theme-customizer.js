@@ -18,6 +18,7 @@
       $('.fa-search').css('color', newval);
       $('.top-footer a, .top-footer p').css('color', newval);
 
+
 		} );
 	} );
 
@@ -52,6 +53,7 @@
 		value.bind( function( newval ) {
 			$('.top-header').css('background-color', newval );
       $('.top-footer').css('background-color', newval );
+        $('.page-wrapper .worker i').css('background-color', newval );
 		} );
 	} );
 
