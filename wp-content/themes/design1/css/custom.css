@@ -70,7 +70,7 @@ header .flexwrapper{
 }
 
 .phone{
-    
+
     float: right;
     font-size: 14px;
 
@@ -341,7 +341,7 @@ header .nav-menu ul{
 }
 
 .site_nav a:hover{
-    color: red; 
+    color: red;
 }
 
 .site_nav .current_page_item a {
@@ -488,7 +488,7 @@ height: 50px;
 
 .main-text-wrap{
     width: 100%;
-    padding: 20px 0px;
+    padding: 19px;
     padding-bottom: 40px;
     margin: auto;
     line-height: 1.7;
@@ -808,7 +808,7 @@ input#searchsubmit{
 }
 
 .top-header-logo img{
-   width: 100%; 
+   width: 100%;
 }
 
 .nav-menu{
