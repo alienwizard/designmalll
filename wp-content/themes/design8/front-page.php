@@ -5,7 +5,7 @@
 
 		<section id="intro">
 		<div class="banner-img">
-			<img src="http://localhost:8080/design/wp-content/uploads/2016/09/banner_pic.png">
+			<?php the_post_thumbnail('full'); ?>
 		</div>
 				<!--<div class="stripes"></div>-->
 			<div class="container">
