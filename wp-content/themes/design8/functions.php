@@ -331,13 +331,19 @@ function mytheme_customize_css()
           header .top-header nav a { color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; }
 
 					.fa-search{
-						 color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>; 
+						 color: #<?php echo get_theme_mod('header_textcolor', '000000'); ?>;
 					}
 
          	.bottom-header{
 
          		background-color: <?php echo get_theme_mod('nav_backgroundColor', '000000');?>
          	}
+
+					.top-footer{
+
+							background-color: <?php echo get_theme_mod('header_backgroundColor', '000000');?>
+
+					}
 
 
 

@@ -16,6 +16,7 @@
 		value.bind( function( newval ) {
 			$('.top-header a').css('color', newval );
       $('.fa-search').css('color', newval);
+      $('.top-footer a, .top-footer p').css('color', newval);
 
 		} );
 	} );
@@ -50,6 +51,7 @@
 		console.log('called');
 		value.bind( function( newval ) {
 			$('.top-header').css('background-color', newval );
+      $('.top-footer').css('background-color', newval );
 		} );
 	} );
 
