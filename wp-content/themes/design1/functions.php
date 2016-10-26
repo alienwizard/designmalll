@@ -11,7 +11,7 @@ if(function_exists('register_nav_menus')){
 if ( file_exists( STYLESHEETPATH . '/class.my-theme-options.php' ) )
 	include_once( STYLESHEETPATH . '/class.my-theme-options.php' );
 
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
 
 
@@ -22,13 +22,13 @@ function mytheme_customize_register( $wp_customize ) {
 
 
 
-//ADD OPTIONS SECTION TO ANPASSA PAGE 
+//ADD OPTIONS SECTION TO ANPASSA PAGE
 
 	$wp_customize->add_section( 'mytheme_new_section_name' , array(
     'title'      => __( 'Visible Section Name', 'mytheme' ),
     'priority'   => 30,
     'capability' => 'edit_theme_options', //Capability needed to tweak
-    'description' => __('Allows you to customize some example settings for MyTheme.', 'mytheme'), 
+    'description' => __('Allows you to customize some example settings for MyTheme.', 'mytheme'),
 
 ) );
 
@@ -118,7 +118,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'header_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -132,7 +132,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'header_textcolor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
             $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
@@ -143,7 +143,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'sidebar_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -155,7 +155,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'sidebar_textColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -167,7 +167,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -180,9 +180,9 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'boxColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
-      
+
 
                               $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
          $wp_customize, //Pass the $wp_customize object (required)
@@ -192,7 +192,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'textColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
                                                             $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
@@ -203,7 +203,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'footer_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -215,7 +215,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'footer_textColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
                                                                                           $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
@@ -226,7 +226,7 @@ $wp_customize->add_setting( 'bot_footer_backgroundColor' , array(
             'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
             'settings' => 'bot_footer_backgroundColor', //Which setting to load and manipulate (serialized is okay)
             'priority' => 10, //Determines the order this control appears in for the specified section
-         ) 
+         )
       ) );
 
 
@@ -250,17 +250,17 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link
 
 /**
  * Used by hook: 'customize_preview_init'
- * 
+ *
  * @see add_action('customize_preview_init',$func)
  */
 function mytheme_customizer_live_preview()
 {
 
-	wp_enqueue_script( 
+	wp_enqueue_script(
 		  'mytheme-themecustomizer',			//Give the script an ID
 		  get_template_directory_uri().'/js/theme-customizer.js',//Point to file
 		  array( 'jquery','customize-preview' ),	//Define dependencies
-		  '',						//Define a version (optional) 
+		  '',						//Define a version (optional)
 		  false						//Put script in footer?
 	);
 }
@@ -326,9 +326,7 @@ function mytheme_customize_css()
                 background-color: #<?php echo get_theme_mod('nav_backgroundColor', '000000');?>
             }
 
-            .site_nav li{
-                background-color:#<?php echo get_theme_mod('nav_backgroundColor', '000000');?>
-            }
+
 
 
 
@@ -348,7 +346,7 @@ function mytheme_customize_css()
          		background-color: <?php echo get_theme_mod('bot_footer_backgroundColor', '000000');?>
          	}
 
-         	
+
          </style>
     <?php
 }
@@ -368,7 +366,7 @@ add_action( 'customize_preview_init', 'mytheme_customizer_live_preview' );
 
 
 
-/* 
+/*
  * Helper function to return the theme option value. If no value has been saved, it returns $default.
  * Needed because options are saved as serialized strings.
  *
@@ -377,16 +375,16 @@ add_action( 'customize_preview_init', 'mytheme_customizer_live_preview' );
 
 if ( !function_exists( 'of_get_option' ) ) {
 function of_get_option($name, $default = false) {
-	
+
 	$optionsframework_settings = get_option('optionsframework');
-	
+
 	// Gets the unique option id
 	$option_name = $optionsframework_settings['id'];
-	
+
 	if ( get_option($option_name) ) {
 		$options = get_option($option_name);
 	}
-		
+
 	if ( isset($options[$name]) ) {
 		return $options[$name];
 	} else {
