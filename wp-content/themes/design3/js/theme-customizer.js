@@ -1,18 +1,20 @@
 /**
  * This file adds some LIVE to the Theme Customizer live preview. To leverage
  * this, set your custom settings to 'postMessage' and then add your handling
- * here. Your javascript should grab settings from customizer controls, and 
+ * here. Your javascript should grab settings from customizer controls, and
  * then make any necessary changes to the page using jQuery.
  */
 ( function( $ ) {
 
-	// Update the site title in real time...
-
-	
-	
+	// Update the brandcolor
+	wp.customize( 'theme_maincolor', function( value ) {
+		value.bind( function( newval ) {
+			$('.contact i').css('color', newval );
+		} );
+	} );
 
 	//Update site title color in real time...
-	wp.customize( 'header_textcolor', function( value ) {
+	wp.customize( 'nav_textcolor', function( value ) {
 		value.bind( function( newval ) {
 			$('.bottom-header a').css('color', newval );
 		} );
@@ -51,6 +53,12 @@
 		} );
 	} );
 
+	wp.customize( 'header_textcolor', function( value ) {
+		console.log('called');
+		value.bind( function( newval ) {
+			$('header .contact .textwidget').css('color', newval );
+		} );
+	} );
 
 				//Update site background color...
 	wp.customize( 'footer_backgroundColor', function( value ) {
@@ -76,7 +84,7 @@
 			$('.footer-bottom').css('background-color', newval );
 		} );
 	} );
-	
-	
-	
+
+
+
 } )( jQuery );

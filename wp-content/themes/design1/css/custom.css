@@ -157,6 +157,7 @@ section.banner h3 {
     padding: 90px 0px;
     position: relative;
     background-color: #EFEFEF;
+    min-height: 60vh;
 }
 
 .section-white h1{
