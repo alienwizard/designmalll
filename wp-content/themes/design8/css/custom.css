@@ -1251,7 +1251,6 @@ section .content-wrap {
 }
 section .container {
   padding: 15px;
-  margin: 100px auto;
   max-width: 1280px;
 }
 section .container p {
