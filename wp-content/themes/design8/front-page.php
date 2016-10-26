@@ -4,8 +4,8 @@
 <div class="page-wrapper">
 
 		<section id="intro">
-		<div class="banner-img">
-			<?php the_post_thumbnail('full'); ?>
+		<div class="banner-img" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')">
+
 		</div>
 				<!--<div class="stripes"></div>-->
 			<div class="container">
