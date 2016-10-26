@@ -25,7 +25,7 @@ header{
     display: block;
     position: fixed;
     top: 0px;
-    z-index: 100;
+    z-index: 9900;
     font-family: 'Montserrat', sans-serif;
     background-color: #FEFEFE;
     /* height: 60px; */
